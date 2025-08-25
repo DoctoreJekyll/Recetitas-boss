@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using General;
 using UnityEngine;
 
@@ -16,6 +17,8 @@ namespace Player
 
         
         private CharacterStats characterStats;
+
+        [SerializeField] private bool isAPlayer;
         
         private void Awake()
         {
@@ -37,10 +40,22 @@ namespace Player
 
         private void LoseLife(int amount)
         {
-            if (canTakeDamage)
+            if (isAPlayer)
+            {   
+                StartCoroutine(TakeDamage(amount));
+            }
+            else
             {
                 life -= amount;
             }
+        }
+
+        IEnumerator TakeDamage(int amount)
+        {
+            life -= amount;
+            canTakeDamage = false;
+            yield return new WaitForSeconds(0.5f);
+            canTakeDamage = true;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
