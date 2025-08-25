@@ -39,5 +39,10 @@ namespace Player
         {
             rb2d.linearVelocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
         }
+
+        public Vector2 GetDirection()
+        {
+            return  moveDirection;
+        }
     }
 }
