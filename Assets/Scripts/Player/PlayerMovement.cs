@@ -5,8 +5,8 @@ namespace Player
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField]
-        [Header("Player Movement")]
+        private PlayerStats playerStats;
+        
         private float speed;
         
         private Vector2 moveDirection;
@@ -15,6 +15,12 @@ namespace Player
         private void Awake()
         {
             rb2d = GetComponent<Rigidbody2D>();
+            playerStats = GetComponent<PlayerStats>();
+        }
+
+        private void Start()
+        {
+            speed = playerStats.PlayerSpeed;
         }
 
         private void Update()
