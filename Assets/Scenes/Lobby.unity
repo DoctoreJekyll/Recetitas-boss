@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 1412656083}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.42, y: 0.03, z: 0}
+  m_LocalPosition: {x: -0.64, y: 0.03, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -242,8 +242,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -25.505257, y: 1.3093681}
-  - {x: -30.6918, y: 1.1765771}
+  - {x: -25.505257, y: 3.1011343}
+  - {x: -30.760714, y: 3.175085}
   - {x: -30.84247, y: -1.2665511}
   - {x: -25.614456, y: -1.3305101}
   - {x: -25.476835, y: -8.713861}
@@ -262,7 +262,7 @@ EdgeCollider2D:
   - {x: -7.075258, y: -3.9194453}
   - {x: -7.1500335, y: 9.235649}
   - {x: -25.2708, y: 9.367372}
-  - {x: -25.560062, y: 1.3782818}
+  - {x: -25.422234, y: 2.9633055}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -280,12 +280,20 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4395602271084941607, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4119
+      objectReference: {fileID: 0}
+    - target: {fileID: 4395602271084941607, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3017
+      objectReference: {fileID: 0}
+    - target: {fileID: 4395602271084941607, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.8
+      value: 10.32
       objectReference: {fileID: 0}
     - target: {fileID: 4395602271084941607, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.43
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 4395602271084941607, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
       propertyPath: m_LocalPosition.z
@@ -319,6 +327,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5147704095242686785, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 71bc677a2b9b6814eb02c32764561cb1, type: 3}
     - target: {fileID: 5147704095242686785, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
       propertyPath: m_SortingOrder
       value: 1
