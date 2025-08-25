@@ -5,7 +5,7 @@ namespace Player
 {
     public class PlayerMovement : MonoBehaviour
     {
-        private PlayerStats playerStats;
+        private CharacterStats characterStats;
         
         private float speed;
         
@@ -15,12 +15,12 @@ namespace Player
         private void Awake()
         {
             rb2d = GetComponent<Rigidbody2D>();
-            playerStats = GetComponent<PlayerStats>();
+            characterStats = GetComponent<CharacterStats>();
         }
 
         private void Start()
         {
-            speed = playerStats.PlayerSpeed;
+            speed = characterStats.PlayerSpeed;
         }
 
         private void Update()
@@ -40,10 +40,21 @@ namespace Player
             
             moveDirection = new Vector2(x, y).normalized;
         }
+        
+        private Vector2 externalForce; // Variable para almacenar la fuerza externa (knockback)
 
         private void Move()
         {
-            rb2d.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
+            // Combinar la velocidad del jugador y la fuerza externa
+            rb2d.velocity = (moveDirection * speed) + externalForce;
+
+            // Reducir la fuerza externa gradualmente
+            externalForce = Vector2.Lerp(externalForce, Vector2.zero, 5f * Time.fixedDeltaTime);
+        }
+        
+        public void ApplyExternalForce(Vector2 force)
+        {
+            externalForce = force;
         }
 
         public Vector2 GetDirection()

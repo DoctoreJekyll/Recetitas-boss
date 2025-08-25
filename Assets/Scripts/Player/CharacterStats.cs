@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerStats : MonoBehaviour
+    public class CharacterStats : MonoBehaviour
     {
         
         [SerializeField] private float playerSpeed;
@@ -11,7 +11,7 @@ namespace Player
         [SerializeField] private int playerLife;
         [SerializeField] private int playerMaxLife;
     
-        [SerializeField] private float damagePerBullet;
+        [SerializeField] private int damagePerBullet;
         [SerializeField] private float gunShootRate;
     
         [SerializeField] private int lifeStealth;
@@ -40,7 +40,7 @@ namespace Player
             set => playerMaxLife = value;
         }
 
-        public float DamagePerBullet
+        public int DamagePerBullet
         {
             get => damagePerBullet;
             set => damagePerBullet = value;
