@@ -552,11 +552,6 @@ MonoBehaviour:
   m_Damping: 0.5
   m_MaxWindowSize: -1
   m_Padding: 0
---- !u!4 &1252325232 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8248791794358458868, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
-  m_PrefabInstance: {fileID: 1952897885}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1457228906
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,18 +732,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 719013766967087341, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
-      propertyPath: canMove
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 719013766967087341, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
-      propertyPath: playerSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1136461176264211859, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
-      propertyPath: m_Name
-      value: Gun
-      objectReference: {fileID: 0}
     - target: {fileID: 4395602271084941607, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -793,38 +776,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8249936093420287933, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5481383336245657935, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1952897894}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
 --- !u!4 &1952897886 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4395602271084941607, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
   m_PrefabInstance: {fileID: 1952897885}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1952897887 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5481383336245657935, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
-  m_PrefabInstance: {fileID: 1952897885}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1952897894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952897887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca483485509a75348a6dfe10b54e296b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gun: {fileID: 1252325232}
-  gunDistance: 1
 --- !u!1 &1978522196
 GameObject:
   m_ObjectHideFlags: 0

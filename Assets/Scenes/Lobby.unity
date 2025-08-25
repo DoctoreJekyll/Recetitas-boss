@@ -275,6 +275,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 719013766967087341, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
+      propertyPath: playerSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4395602271084941607, guid: a097a0b398a35b149b928c2f4b7ed871, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.8

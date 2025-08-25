@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8248791794358458868}
   - component: {fileID: 8874819561529845517}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 719013766967087341}
   - component: {fileID: 651560385087014380}
   - component: {fileID: 383666289185913113}
+  - component: {fileID: 1394950921616401409}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -235,7 +236,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &719013766967087341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,8 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5aa9b0ef111644ba1ef3a93def7937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 0
-  canMove: 0
+  playerSpeed: 10
+  canMove: 1
   playerLife: 0
   playerMaxLife: 0
   damagePerBullet: 0
@@ -283,3 +284,17 @@ MonoBehaviour:
   timePlayerIsDashing: 0.2
   dashCooldown: 1
   keyCode: 32
+--- !u!114 &1394950921616401409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5481383336245657935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca483485509a75348a6dfe10b54e296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 8248791794358458868}
+  gunDistance: 1
