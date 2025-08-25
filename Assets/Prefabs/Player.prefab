@@ -302,6 +302,8 @@ MonoBehaviour:
   fireRate: 0.2
   bulletSpeed: 20
   knockBackForce: 5
+  doubleShotEnabled: 1
+  shotSpread: 0.35
   bullet: {fileID: 3304577253023565315, guid: d2436bdc814cab7469979fb4f326c63a, type: 3}
 --- !u!114 &2822946849895701186
 MonoBehaviour:
