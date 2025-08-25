@@ -17,11 +17,14 @@ namespace Player
         private PlayerMovement playerMovement;
         private Rigidbody2D rb;
         private bool canDash;
+        
+        private CircleCollider2D circleCollider;
 
         private void Awake()
         {
             playerMovement = GetComponent<PlayerMovement>();
             rb = GetComponent<Rigidbody2D>();
+            circleCollider = GetComponent<CircleCollider2D>();
         }
 
         private void Start()
@@ -46,12 +49,14 @@ namespace Player
 
             yield return new WaitForSeconds(timePlayerIsDashing);
             playerMovement.enabled = true;
+            circleCollider.enabled = true;
             yield return new WaitForSeconds(dashCooldown);
             canDash = true;
         }
 
         private void DashMove()
         {
+            circleCollider.enabled = false;
             Vector2 dashDirection = playerMovement.GetDirection();
             if (dashDirection == Vector2.zero)
             {
