@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby.unity
     guid: ff5fb21b4875a8243a32d1e23e9990ee
   - enabled: 1
-    path: Assets/Scenes/Room 1.unity
+    path: "Assets/Scenes/Level 1 (Troya\xB4s Horse).unity"
     guid: 1ae9b8ad184f1a44cb61fcd7d9aadfe4
   m_configObjects: {}
