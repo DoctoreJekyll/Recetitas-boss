@@ -12,12 +12,19 @@ namespace Machine
 
         private void Start()
         {
-            //ChangeState<DecideState>();
+            ChangeState<DecideState>();
         }
 
         public void ChangeState<T>() where T : State
         {
-            throw new NotImplementedException();
+            T targetState = GetComponent<T>();
+            if (targetState == null)
+            {
+                Debug.Log("Try to change State");
+                return;
+            }
+            
+            InitiateNewState(targetState);
         }
 
         private void InitiateNewState(State targetState)
