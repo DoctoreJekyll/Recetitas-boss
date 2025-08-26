@@ -185,4 +185,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9532ac8c78f3b61438851d65cc3618cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  globalShakeForce: 1
+  globalShakeForce: 0.5
