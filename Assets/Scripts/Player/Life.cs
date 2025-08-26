@@ -40,21 +40,36 @@ namespace Player
 
         private void LoseLife(int amount)
         {
-            if (isAPlayer)
-            {   
-                StartCoroutine(TakeDamage(amount));
-            }
-            else
+            if (canTakeDamage)
             {
-                life -= amount;
+                if (isAPlayer)
+                {   
+                    StartCoroutine(TakeDamage(amount));
+                }
+                else
+                {
+                    life -= amount;
+                }
             }
+
         }
 
         IEnumerator TakeDamage(int amount)
         {
             life -= amount;
             canTakeDamage = false;
+            //Visual effect
             yield return new WaitForSeconds(0.5f);
+            canTakeDamage = true;
+        }
+
+        public void MakeInvulnerable()
+        {
+            canTakeDamage = false;
+        }
+
+        public void MakeVulnerable()
+        {
             canTakeDamage = true;
         }
 

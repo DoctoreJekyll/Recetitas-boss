@@ -15,16 +15,16 @@ namespace Player
         [SerializeField] private KeyCode keyCode = KeyCode.Space;
         
         private PlayerMovement playerMovement;
+        private Life life;
         private Rigidbody2D rb;
         private bool canDash;
         
-        private CircleCollider2D circleCollider;
 
         private void Awake()
         {
             playerMovement = GetComponent<PlayerMovement>();
             rb = GetComponent<Rigidbody2D>();
-            circleCollider = GetComponent<CircleCollider2D>();
+            life = GetComponent<Life>();
         }
 
         private void Start()
@@ -48,15 +48,18 @@ namespace Player
             DashMove();
 
             yield return new WaitForSeconds(timePlayerIsDashing);
+            life.MakeInvulnerable();
             playerMovement.enabled = true;
-            circleCollider.enabled = true;
+            
+            
+            
             yield return new WaitForSeconds(dashCooldown);
             canDash = true;
         }
 
         private void DashMove()
         {
-            circleCollider.enabled = false;
+            life.MakeInvulnerable();
             Vector2 dashDirection = playerMovement.GetDirection();
             if (dashDirection == Vector2.zero)
             {
