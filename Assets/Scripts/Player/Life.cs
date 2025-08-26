@@ -11,9 +11,23 @@ namespace Player
         [SerializeField] private string tagToLoseLife;
         
         [SerializeField] private int life;
+
+        public int LifeActual
+        {
+            get => life;
+            set => life = value;
+        }
+
+        public int MaxLife
+        {
+            get => maxLife;
+            set => maxLife = value;
+        }
+
         private int maxLife;
         
         private bool canTakeDamage;
+        private bool armor;
 
         
         private CharacterStats characterStats;

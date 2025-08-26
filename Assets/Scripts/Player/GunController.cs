@@ -101,5 +101,10 @@ namespace Player
             // Aplicar una fuerza instantánea a la bala
             bulletRb.AddForce(direction * bulletSpeed, ForceMode2D.Impulse);
         }
+
+        public void MakeDoubleShootDisable()
+        {
+            doubleShotEnabled = false;
+        }
     }
 }

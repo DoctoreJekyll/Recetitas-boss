@@ -18,7 +18,8 @@ namespace Player
         private Life life;
         private Rigidbody2D rb;
         private bool canDash;
-        
+
+        private bool invulnerableSkill;
 
         private void Awake()
         {
@@ -29,6 +30,7 @@ namespace Player
 
         private void Start()
         {
+            invulnerableSkill = true;
             canDash = true;
         }
 
@@ -40,6 +42,11 @@ namespace Player
             }
         }
 
+        public void MakeInvulnerableDashDisable()
+        {
+            invulnerableSkill = false;
+        }
+
         private IEnumerator DashAction()
         {
             canDash = false;
@@ -48,10 +55,13 @@ namespace Player
             DashMove();
 
             yield return new WaitForSeconds(timePlayerIsDashing);
-            life.MakeInvulnerable();
+            
+            if (invulnerableSkill)
+            {
+                life.MakeInvulnerable();
+            }
+            
             playerMovement.enabled = true;
-            
-            
             
             yield return new WaitForSeconds(dashCooldown);
             canDash = true;
@@ -59,7 +69,11 @@ namespace Player
 
         private void DashMove()
         {
-            life.MakeInvulnerable();
+            if (invulnerableSkill)
+            {
+                life.MakeInvulnerable();
+            }
+            
             Vector2 dashDirection = playerMovement.GetDirection();
             if (dashDirection == Vector2.zero)
             {
