@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="455797c5-e475-41d8-9a2d-c4107df3bfc6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Recetitas-boss/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Recetitas-boss/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/jugador/voltereta/vuelta8.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1756141305789</updated>
       <workItem from="1756141310663" duration="8129000" />
-      <workItem from="1756202786244" duration="8343000" />
+      <workItem from="1756202786244" duration="9052000" />
     </task>
     <servers />
   </component>
