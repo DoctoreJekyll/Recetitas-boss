@@ -19,8 +19,7 @@ namespace Player
 
         [Header("References")]
         [SerializeField] private GameObject bullet;
-
-        private Rigidbody2D rb2d;
+        
         private PlayerMovement playerMovement;
         private CharacterStats stats;
 
@@ -28,7 +27,6 @@ namespace Player
 
         private void Awake()
         {
-            rb2d = GetComponent<Rigidbody2D>();
             playerMovement = GetComponent<PlayerMovement>();
             stats = GetComponent<CharacterStats>();
         }
@@ -57,7 +55,8 @@ namespace Player
 
         private void ShootInput()
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nextFireTime)
+            // CAMBIO CLAVE AQUÍ: Usamos Input.GetKey() en lugar de Input.GetKeyDown()
+            if (Input.GetKey(KeyCode.Mouse0) && Time.time >= nextFireTime)
             {
                 nextFireTime = Time.time + fireRate;
                 InstantiateBullets();
