@@ -12,7 +12,7 @@ namespace Machine
 
         private void Start()
         {
-            ChangeState<DecideState>();
+            //ChangeState<DecideState>();
         }
 
         public void ChangeState<T>() where T : State
