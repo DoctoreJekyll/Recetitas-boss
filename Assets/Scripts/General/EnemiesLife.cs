@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace General
 {
@@ -13,6 +15,8 @@ namespace General
 
         public bool specialCondition;
         public bool canGetDamage;
+
+        public UnityEvent eventLauncher;
 
         public int LifeActual
         {
@@ -45,8 +49,6 @@ namespace General
         {
             life = characterStats.PlayerLife;
             maxLife = characterStats.PlayerMaxLife;
-            
-            canTakeDamage = true;
         }
 
         private void Update()
@@ -56,7 +58,7 @@ namespace General
 
         private void LoseLife(int amount)
         {
-            if (canTakeDamage)
+            if (canGetDamage)
             {
                 life -= amount;
             }
@@ -64,11 +66,12 @@ namespace General
 
         private void LetDamageOn()
         {
-            canTakeDamage = specialCondition;
+            canGetDamage = true;
         }
 
         public void SpecialConditionOff()
         {
+            Debug.Log("Calling PillarDestroyEvent");
             specialCondition = false;
             LetDamageOn();
         }
@@ -127,6 +130,11 @@ namespace General
                 life = 0;
                 Destroy(this.gameObject);
             }
+        }
+
+        private void OnDestroy()
+        {
+            eventLauncher?.Invoke();
         }
     }
 }

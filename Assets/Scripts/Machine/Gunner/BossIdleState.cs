@@ -1,3 +1,4 @@
+using General;
 using Player;
 using UnityEngine;
 
@@ -7,16 +8,17 @@ namespace Machine.Gunner
     {
         [SerializeField] private float rotationSpeed = 5f;
         [SerializeField] private float healthThreshold = 50f;
+        [SerializeField] private float timeBetweenShots = 2f;
 
         private GunnerStateMachine bossStateMachine;
         private Transform target;
-        private Life life;
+        private EnemiesLife life;
 
         private void Awake()
         {
             bossStateMachine = GetComponent<GunnerStateMachine>();
             target = GameObject.FindWithTag("Player").transform;
-            life = GetComponent<Life>();
+            life = GetComponent<EnemiesLife>();
         }
 
         public override void Tick()
@@ -44,7 +46,7 @@ namespace Machine.Gunner
 
         private bool CheckTimeToShoot()
         {
-            return Time.time > bossStateMachine.lastShotTime + 2f;
+            return Time.time > bossStateMachine.lastShotTime + timeBetweenShots;
         }
     }
 }
