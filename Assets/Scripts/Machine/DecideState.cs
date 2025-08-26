@@ -1,19 +1,31 @@
+using System;
 using UnityEngine;
 
 namespace Machine
 {
-    public class DecideState : MonoBehaviour
+    public class DecideState : State
     {
-        // Start is called before the first frame update
-        void Start()
-        {
         
+        protected StateMachine stateMachine;
+        
+        private void Awake()
+        {
+            stateMachine = GetComponent<StateMachine>();
         }
 
-        // Update is called once per frame
-        void Update()
+        public override void Enter()
         {
-        
+            Debug.Log("StateMachine enter");
+        }
+
+        public override void Exit()
+        {
+            Debug.Log("StateMachine exit");
+        }
+
+        public override void Tick()
+        {
+            Debug.Log("StateMachine tick");
         }
     }
 }

@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="455797c5-e475-41d8-9a2d-c4107df3bfc6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Recetitas-boss/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Recetitas-boss/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Fade.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Fade.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Machine/DecideState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Machine/DecideState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Machine/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Machine/StateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Machine/Gunner/BossSummonBullets.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Life.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -93,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1756141305789</updated>
       <workItem from="1756141310663" duration="8129000" />
-      <workItem from="1756202786244" duration="9640000" />
+      <workItem from="1756202786244" duration="15854000" />
     </task>
     <servers />
   </component>
