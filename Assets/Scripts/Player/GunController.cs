@@ -1,4 +1,5 @@
 using System;
+using Cinemachine;
 using General;
 using UnityEngine;
 
@@ -22,6 +23,7 @@ namespace Player
         
         private PlayerMovement playerMovement;
         private CharacterStats stats;
+        private CinemachineImpulseSource impulseSource;
 
         private float nextFireTime;
 
@@ -29,6 +31,7 @@ namespace Player
         {
             playerMovement = GetComponent<PlayerMovement>();
             stats = GetComponent<CharacterStats>();
+            impulseSource = GetComponent<CinemachineImpulseSource>();
         }
 
         private void Update()
@@ -99,6 +102,7 @@ namespace Player
             Rigidbody2D bulletRb = newBullet.GetComponent<Rigidbody2D>();
 
             // Aplicar una fuerza instantánea a la bala
+            CameraShakeManager.instance.CameraShake(impulseSource);
             bulletRb.AddForce(direction * bulletSpeed, ForceMode2D.Impulse);
         }
 
