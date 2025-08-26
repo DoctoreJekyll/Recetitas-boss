@@ -46,7 +46,7 @@ namespace Machine
         {
             int randomValue = Random.Range(0, positions.Count);
             
-            Vector3 shootDirection = (target.position - transform.position).normalized;
+            Vector3 shootDirection = (target.position - positions[randomValue].transform.position).normalized;
             GameObject newBullet = Instantiate(bulletPrefab, positions[randomValue].transform.position, Quaternion.identity);
             Rigidbody2D bulletRb = newBullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(shootDirection * bulletSpeed, ForceMode2D.Impulse);
