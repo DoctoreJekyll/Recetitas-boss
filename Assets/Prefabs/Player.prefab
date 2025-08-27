@@ -254,8 +254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   canMove: 1
-  playerLife: 6
-  playerMaxLife: 6
+  playerLife: 10
+  playerMaxLife: 10
   damagePerBullet: 10
   gunShootRate: 1
   lifeStealth: 1
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagToLoseLife: Enemy
   life: 0
-  isAPlayer: 0
+  isAPlayer: 1
 --- !u!114 &8883821552500852703
 MonoBehaviour:
   m_ObjectHideFlags: 0

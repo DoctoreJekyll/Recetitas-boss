@@ -1,7 +1,9 @@
 using UnityEngine;
 using Machine.Gunner;
 using System.Collections;
-using System.Collections.Generic; // Importante: añade esta línea
+using System.Collections.Generic;
+using General;
+using Player; // Importante: añade esta línea
 
 namespace Machine
 {
@@ -10,12 +12,14 @@ namespace Machine
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private float bulletSpeed = 10f;
         [SerializeField] private List<GameObject> positions;
-        
-        protected GunnerStateMachine bossStateMachine;
-        protected Transform target;
+
+        private CharacterStats stats;
+        private GunnerStateMachine bossStateMachine;
+        private Transform target;
 
         private void Awake()
         {
+            stats = GetComponent<CharacterStats>();
             bossStateMachine = GetComponent<GunnerStateMachine>();
             target = GameObject.FindWithTag("Player").transform;
         }
@@ -48,6 +52,7 @@ namespace Machine
             
             Vector3 shootDirection = (target.position - positions[randomValue].transform.position).normalized;
             GameObject newBullet = Instantiate(bulletPrefab, positions[randomValue].transform.position, Quaternion.identity);
+            BulletStat(newBullet).Damage = stats.DamagePerBullet;
             Rigidbody2D bulletRb = newBullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(shootDirection * bulletSpeed, ForceMode2D.Impulse);
         }
@@ -59,12 +64,19 @@ namespace Machine
                 // Disparar en la dirección del jugador
                 Vector3 shootDirection = (target.position - transform.position).normalized;
                 GameObject newBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                BulletStat(newBullet).Damage = stats.DamagePerBullet;
                 Rigidbody2D bulletRb = newBullet.GetComponent<Rigidbody2D>();
                 bulletRb.AddForce(shootDirection * bulletSpeed, ForceMode2D.Impulse);
                 
                 // Actualizar el tiempo del último disparo en el BossStateMachine
                 bossStateMachine.lastShotTime = Time.time;
             }
+        }
+
+        private Bullet BulletStat(GameObject reference)
+        {
+            Bullet bullet = reference.GetComponent<Bullet>();
+            return bullet;
         }
     }
 }

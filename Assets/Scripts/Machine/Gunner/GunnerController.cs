@@ -16,7 +16,6 @@ namespace Machine.Gunner
         public void PillarDestroyEvent()
         {
             pillars++;
-            Debug.Log(pillars);
         }
 
         private void Update()

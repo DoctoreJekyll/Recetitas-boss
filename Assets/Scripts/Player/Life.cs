@@ -71,6 +71,7 @@ namespace Player
         IEnumerator TakeDamage(int amount)
         {
             life -= amount;
+            Debug.Log(life);
             canTakeDamage = false;
             //Visual effect
             yield return new WaitForSeconds(0.5f);

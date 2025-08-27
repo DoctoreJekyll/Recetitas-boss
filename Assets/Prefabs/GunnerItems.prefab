@@ -222,6 +222,7 @@ MonoBehaviour:
   bulletSpeed: 5
   fireRate: 2
   healthThreshold: 50
+  damagePillar: 1
   circleRadius: 2
 --- !u!1 &1268269740118625943
 GameObject:
@@ -414,6 +415,7 @@ MonoBehaviour:
   bulletSpeed: 5
   fireRate: 2
   healthThreshold: 50
+  damagePillar: 1
   circleRadius: 2
 --- !u!1 &2225232405086089734
 GameObject:
@@ -606,6 +608,7 @@ MonoBehaviour:
   bulletSpeed: 5
   fireRate: 2
   healthThreshold: 50
+  damagePillar: 1
   circleRadius: 2
 --- !u!1 &3183065408884466224
 GameObject:
@@ -905,6 +908,7 @@ MonoBehaviour:
   bulletSpeed: 5
   fireRate: 2
   healthThreshold: 50
+  damagePillar: 1
   circleRadius: 2
 --- !u!1 &6689281894769356297
 GameObject:
@@ -1047,7 +1051,7 @@ MonoBehaviour:
   canMove: 0
   playerLife: 200
   playerMaxLife: 200
-  damagePerBullet: 0
+  damagePerBullet: 1
   gunShootRate: 0
   lifeStealth: 0
 --- !u!114 &2024783936976046149

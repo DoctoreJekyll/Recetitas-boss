@@ -12,6 +12,7 @@ namespace General
         [SerializeField] private float bulletSpeed = 5f;
         [SerializeField] private float fireRate = 2f;
         [SerializeField] private float healthThreshold = 50f;
+        [SerializeField] private int damagePillar = 1;
         
         [Header("Circle Settings")]
         [SerializeField] private float circleRadius = 2f;
@@ -50,6 +51,8 @@ namespace General
 
                 // Instanciamos la bala
                 GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
+                Bullet newBulletScript = bullet.GetComponent<Bullet>();
+                newBulletScript.Damage = damagePillar;
                 Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
 
                 if (bulletRb != null)
