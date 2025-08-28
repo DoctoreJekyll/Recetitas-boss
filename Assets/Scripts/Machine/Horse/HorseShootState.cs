@@ -13,6 +13,7 @@ namespace Machine.Horse
 
         private StateMachine stateMachine;
         private Rigidbody2D rb2d;
+        private InstantiateEnemies instantiateEnemies;
 
         private void Awake()
         {
@@ -22,7 +23,6 @@ namespace Machine.Horse
 
         public override void Enter()
         {
-            Debug.Log("Enter ShootState. Firing bullets.");
             ShootInCircle();
             
             StartCoroutine(WaitAndChargeAgain());

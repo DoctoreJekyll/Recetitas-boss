@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="455797c5-e475-41d8-9a2d-c4107df3bfc6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Recetitas-boss/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Recetitas-boss/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Horse.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Horse.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 2 (Trojan Horse).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 2 (Trojan Horse).unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Machine/Horse/BossChargeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Machine/Horse/BossChargeState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Machine/Horse/HorseShootState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Machine/Horse/HorseShootState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Machine/Horse/InstantiateEnemies.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Machine/Horse/InstantiateEnemies.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +24,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Machine/Horse/HomingTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Machine/Horse/HorseShootState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Machine/Horse/InstantiateEnemies.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Life.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -98,6 +103,7 @@
       <updated>1756141305789</updated>
       <workItem from="1756141310663" duration="8129000" />
       <workItem from="1756202786244" duration="20628000" />
+      <workItem from="1756379056117" duration="3632000" />
     </task>
     <servers />
   </component>
