@@ -130,6 +130,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 278109450508102944, guid: 4773f9e96bdc72246b37d74c02beef52, type: 3}
+      propertyPath: canMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 278109450508102944, guid: 4773f9e96bdc72246b37d74c02beef52, type: 3}
+      propertyPath: playerLife
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 278109450508102944, guid: 4773f9e96bdc72246b37d74c02beef52, type: 3}
+      propertyPath: playerMaxLife
+      value: 750
+      objectReference: {fileID: 0}
     - target: {fileID: 1499743234035413798, guid: 4773f9e96bdc72246b37d74c02beef52, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
