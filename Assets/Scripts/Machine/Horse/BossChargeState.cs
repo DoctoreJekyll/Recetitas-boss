@@ -27,7 +27,6 @@ namespace Machine.Horse
 
         public override void Enter()
         {
-            Debug.Log("Enter ChargeState. Starting wind-up.");
             hasBounced = false;
             StartCoroutine(PerformCharge());
         }
@@ -56,7 +55,6 @@ namespace Machine.Horse
                 StopCoroutine("PerformCharge");
                 
                 hasBounced = true;
-                Debug.Log("¡Rebote detectado por material!");
                 
                 StartCoroutine(TransitionAfterBounce());
             }

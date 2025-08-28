@@ -1,4 +1,5 @@
 using System.Collections;
+using Player;
 using UnityEngine;
 
 namespace Machine.Horse
@@ -10,15 +11,22 @@ namespace Machine.Horse
         [SerializeField] private int numberOfBullets = 8;
         [SerializeField] private float bulletSpeed = 5f;
         [SerializeField] private float circleRadius = 2f;
+        [SerializeField] private int lifeToStartSecondPhase;
 
         private StateMachine stateMachine;
         private Rigidbody2D rb2d;
         private InstantiateEnemies instantiateEnemies;
+        private Life life;
+        private bool invokeEnemiesPhase;
 
         private void Awake()
         {
             stateMachine = GetComponent<StateMachine>();
             rb2d = GetComponent<Rigidbody2D>();
+            instantiateEnemies = GetComponent<InstantiateEnemies>();
+            life = GetComponent<Life>();
+            
+            invokeEnemiesPhase = true;
         }
 
         public override void Enter()
@@ -53,6 +61,13 @@ namespace Machine.Horse
         private IEnumerator WaitAndChargeAgain()
         {
             Debug.Log("charge");
+
+            if (life.LifeActual < lifeToStartSecondPhase && invokeEnemiesPhase)
+            {
+                instantiateEnemies.InstantiateEnemiesFrom(this.transform.position, this.transform.rotation);
+                invokeEnemiesPhase = false;
+            }
+            
             yield return new WaitForSeconds(1.5f);
             stateMachine.ChangeState<BossChargeState>();
         }

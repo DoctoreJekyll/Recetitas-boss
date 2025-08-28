@@ -12,7 +12,6 @@ namespace General
         {
             if (other.CompareTag("Wall"))
             {
-                Debug.Log("Destroying by wall");
                 Destroy(this.gameObject);
             }
         }
