@@ -45,21 +45,22 @@ namespace Machine.Loki
         {
             if (projectilePrefab == null || playerTarget == null) return;
 
-            // Instancia el proyectil
-            GameObject newProjectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-            
-            // Dirige el proyectil hacia el jugador (si tiene un Rigidbody2D)
-            Rigidbody2D rb = newProjectile.GetComponent<Rigidbody2D>();
-            if (rb != null)
-            {
-                Vector2 direction = (playerTarget.position - transform.position).normalized;
-                rb.AddForce(direction * bulletForce, ForceMode2D.Impulse);
-            }
+            // Calcula la dirección en la que el jefe está mirando
+            Vector2 shootDirection = (playerTarget.position - transform.position).normalized;
+    
+            // Define una distancia de desplazamiento
+            float offsetDistance = 1.0f; 
+
+            // Calcula la nueva posición de inicio para la bala
+            Vector3 spawnPosition = transform.position + (Vector3)shootDirection * offsetDistance;
+
+            // Instancia el proyectil en la nueva posición
+            Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
         }
         
         public override void Exit()
         {
-            Debug.Log("Exit LokiShootState.");
+            
         }
     }
 }
